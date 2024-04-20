@@ -6,7 +6,6 @@ using TShockAPI;
 using System;
 using System.Timers;
 using System.Collections.Generic;
-using System.IO;
 using Microsoft.Xna.Framework;
 using System.Linq;
 
@@ -114,7 +113,7 @@ namespace RegionSpawn
                             }
                             foreach (var cmd in region.Commands)
                             {
-                                //.HandleCommand(TSPlayer.Server, cmd.Replace("name",));
+                                Commands.HandleCommand(TSPlayer.Server, cmd);
                                 //执行指令部分
                             }
                             //正常副本结束部分
